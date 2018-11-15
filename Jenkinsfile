@@ -16,7 +16,7 @@ node {
   sshagent (credentials: ['target']) {
         sh 'scp *.sh ubuntu@10.0.0.51:/tmp'
         sh 'ssh -o StrictHostKeyChecking=no -l ubuntu 10.0.0.51 ls -ltr /tmp && ./docker-ce.sh'
-        sh 'ssh -o StrictHostKeyChecking=no -l ubuntu 10.0.0.51 docker --version'
+        sh 'ssh -o StrictHostKeyChecking=no -l ubuntu 10.0.0.51 sudo docker --version'
      }
   
  
